@@ -7,7 +7,7 @@ public class ApplePicker : MonoBehaviour
 {
     [Header("Inscribed")]
     public GameObject basketPrefab;
-    public int numBaskets = 3;
+    public int numBaskets = 4;
     public float basketBottomY = -14f;
     public float basketSpacingY = 2f;
 
@@ -36,7 +36,8 @@ public class ApplePicker : MonoBehaviour
         basketList.RemoveAt(basketIndex);
         Destroy(basketGO);
         if (basketList.Count == 0) {
-            SceneManager.LoadScene("_Scene_0");
+            SceneManager.LoadScene("main_scene");
+            Start();
         }
     }
 
